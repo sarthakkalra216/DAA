@@ -2,7 +2,7 @@
 using namespace std;
 void insertionSort(int arr[],int n)
 {
-    int key,comp=0,shift=0;
+    int key,comp=-1,shift=-1;
     for(int i=1;i<n;i++)
     {
         key=arr[i];
