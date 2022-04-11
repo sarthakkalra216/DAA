@@ -19,7 +19,7 @@ void insertionSort(int arr[],int n)
     }
     for(int i=0;i<n;i++)
     cout<<arr[i]<<" ";
-    cout<<"Comparision = "<<comp<<" shift = "<<shift<<endl;
+    cout<<endl<<"Comparision = "<<comp<<endl<<" shift = "<<shift<<endl;
 }
 int main()
 {

@@ -1,21 +1,3 @@
-// #include<iostream>
-// using namespace std;
-// int main()
-// {   
-//     int x;
-//     cin >> x;
-//     while(x--)
-//     {
-//         int n,j;
-//         cin>>n;
-//         int arr[n];
-//         vector<int> v;
-//         for (int i = 0; i < n; i++)
-//             cin >> arr[i];
-        
-//     }
-
-// }
 #include<bits/stdc++.h>
 using namespace std;
 int main()
@@ -40,7 +22,7 @@ int main()
        
        while(l<h)
        {
-          if(arr[h]-arr[l]==target) {
+          if(arr[h]-arr[l]==target){
               count++;
               l++;
               h--;
@@ -48,10 +30,7 @@ int main()
           else if(arr[h]-arr[l]>target) h--;
           else l++;
        }
-       
    }
     cout<<count<<endl;
    }
-  
-    
 }
