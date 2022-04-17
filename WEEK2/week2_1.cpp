@@ -22,7 +22,7 @@ void helper (int arr[],int low ,int high,int target)
             temp1=mid;
             while(mid>0 && arr[temp]==target)
             temp--;
-            start=temp;
+            start=temp; 
             while(mid<high && arr[temp1+1]==target)
             temp1++;
             end=temp1;
