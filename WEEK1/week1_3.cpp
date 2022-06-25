@@ -25,7 +25,7 @@ void jump_s(int arr[],int size ,int key)
      if(flag==1)
     cout<<"Present "<<comp<<endl;
     else 
-    cout<<"Not Present "<<comp\
+    cout<<"Not Present "<<comp
     <<endl;
 }
 int main()

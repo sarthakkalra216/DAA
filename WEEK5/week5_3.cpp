@@ -3,7 +3,7 @@
 using namespace std;
 
 void intersection(int arr1[],int n1,int arr2[],int n2)
-{
+{  
     int maxi1=INT_MIN;
     for (int i=0;i<n1;i++)
     {

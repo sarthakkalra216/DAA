@@ -19,7 +19,7 @@ int countPairsWithDiffK(int arr[], int n, int k)
               r++;
         }
          else if(arr[r] - arr[l] > k)
-              l++;
+              l++;   
          else // arr[r] - arr[l] < sum
               r++;
     }  

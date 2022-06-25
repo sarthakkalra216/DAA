@@ -1,62 +1,56 @@
 #include<iostream>
 using namespace std;
-
-void merge(int arr[],int l,int mid,int h)
+int l=0;
+int m=0;
+void count_sort(int arr[],int size,int k)
 {
-    int count=0;
-    int i=l,j=mid+1;
-    int temp[h-l+1];
-    int k=0;
-    
-    while (i<=mid && j<=h)
+    int max=arr[0];
+    for(int i=0;i<size;i++)
     {
-        if (arr[i]<arr[j])
-            temp[k++]=arr[i++];
-        else
+        if(max<arr[i])
+        max=arr[i];
+    }
+    int count[max+1]={0};
+    for(int i=0;i<size;i++)
+    {
+        count[arr[i]]++;
+
+    }
+    for(int i=0;i<=max;i++)
+    {
+        if (count[i]!=0)
         {
-            temp[k++]=arr[j++];
-            count+=mid-i+1;
+            m++;
+            if(m==k)
+            {
+                l=i;
+            }
         }
     }
-    for (;i<=mid;)
-         temp[k++]=arr[i++];
-         
-    for (;j<=h;)
-         temp[k++]=arr[j++];
-         
-    for (int f=0;f<k;f++)
-        arr[f+l]=temp[f];
-}
-void merge_sort(int arr[],int l,int h)
-{
-    if (l<h)
-    {
-        int mid=l+(h-l)/2;
-        merge_sort(arr,l,mid);
-        merge_sort(arr,mid+1,h);
-        merge(arr,l,mid,h);
-    }
-}
 
-
+}
 int main()
 {
-    int t;
-    cin>>t;
-    while (t--)
+    int x,y,z;
+    cin>>x;
+    while(x--)
     {
-        int n;
-        cin>>n;
-        int arr[n];
-        for (int i=0;i<n;i++)
-           cin>>arr[i];
+        cin>>y;
+        int arr[y];
+        for(int i=0;i<y;i++)
+        {
+            cin>>arr[i];
+
+        }
         int k;
         cin>>k;
-
-        merge_sort(arr,0,n-1);
-        int flag=0;
-        cout<<arr[k-1]<<endl;
-         
+        count_sort(arr,y,k);
+         if(k<=m)
+            cout<<k<<": smallest value : "<<l;
+        else
+            cout<<"not present\n";
+        m=0;
+        l=0;
     }
-
-}
+    return 0;
+    }
